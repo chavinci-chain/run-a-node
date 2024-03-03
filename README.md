@@ -24,28 +24,28 @@ We recommend supported operating systems:
 
 - __Creating a Droplet:__ <br/>
     1. Click on the “Create” button in the top right corner, then select “Droplets” from the dropdown list.
-    ![Figure1](../../assets/images/node/node-1.jpeg)<br/>
+    ![Figure1](./assets/images/node/node-1.jpeg)<br/>
     2. Choose a server location that suits your needs from the list of available countries.
-    ![Figure2](../../assets/images/node/node-2.jpeg)<br/>
+    ![Figure2](./assets/images/node/node-2.jpeg)<br/>
     3. For the Operating System, select Ubuntu. 4. Opt for the 22.04 LTS (x64) version for optimal stability and performance. 
-    ![Figure3](../../assets/images/node/node-3.jpeg)<br/>
+    ![Figure3](./assets/images/node/node-3.jpeg)<br/>
     5. In the “CPU options” section, select the basic “Regular — Disc Type: SSD”. You may choose a higher model for increased processing power, enhancing your node’s performance within the network. 6. Recommended specs for optimal operation are 2 GB of RAM and 2 CPUs. However, the minimum viable specs are 1 GB of RAM and 1 CPU, though this is not advisable for optimal performance.
-    ![Figure4](../../assets/images/node/node-4.jpeg)<br/>
+    ![Figure4](./assets/images/node/node-4.jpeg)<br/>
     7. For the “Choose authentication method” section, select “Password”, although SSH keys are also an option. 8. Set your password.
-    ![Figure5](../../assets/images/node/node-5.jpeg)<br/>
+    ![Figure5](./assets/images/node/node-5.jpeg)<br/>
   
 
 - __Finalizing Details:__ <br/>
     - Enter a Host name of your choosing. This can be any name you prefer.  — Click on the “Create Droplet” button to proceed. Once created, you’ll be directed to the “Learn” page.
-    ![Figure6](../../assets/images/node/node-6.jpeg)<br/>
+    ![Figure6](./assets/images/node/node-6.jpeg)<br/>
 
 ## __2. Node Installation__
 
 - __Accessing Your Droplet:__ <br/>
     1. Click on the newly created droplet that bears the name you assigned.
-    ![Figure7](../../assets/images/node/node-7.jpeg)<br/>
+    ![Figure7](./assets/images/node/node-7.jpeg)<br/>
     2. Click on the "Console" option to open a new terminal tab.
-    ![Figure8](../../assets/images/node/node-8.jpeg)<br/>
+    ![Figure8](./assets/images/node/node-8.jpeg)<br/>
 <br/>
 
 - __Executing Commands:__ <br/>
@@ -53,14 +53,14 @@ We recommend supported operating systems:
     ```
         wget https://github.com/chavinci-chain/chavinci-releases/releases/download/1.0.3/chavinci-linux.zip
     ```
-    ![Figure9](../../assets/images/node/node-9.jpeg)<br/>
+    ![Figure9](./assets/images/node/node-9.jpeg)<br/>
     2. Install unzip if not already available: `apt install unzip`. When prompted, select the `[*]packagekit.service` option and click <ok>.
-    ![Figure10](../../assets/images/node/node-10.jpeg)<br/>
+    ![Figure10](./assets/images/node/node-10.jpeg)<br/>
     3. List the directory contents with `ls` to verify the download.
-    ![Figure11](../../assets/images/node/node-11.jpeg)<br/>
+    ![Figure11](./assets/images/node/node-11.jpeg)<br/>
     4. Unzip the downloaded file: `unzip chavinci-linux.zip`.
     5. Create a directory for the blockchain data: `mkdir ~/.chachain`, and navigate into it with `cd .chachain`.
-    ![Figure12](../../assets/images/node/node-12.jpeg)<br/>
+    ![Figure12](./assets/images/node/node-12.jpeg)<br/>
     6. Generate a configuration file: `nano chachain.conf`. This will open a text editor.
 
 
@@ -77,15 +77,15 @@ We recommend supported operating systems:
 ```
 Save the file and exit the editor.
 
-![Figure13](../../assets/images/node/node-13.jpeg)<br/>
+![Figure13](./assets/images/node/node-13.jpeg)<br/>
 
 - __Launching the Node:__
     1. Exit the `.chachain` directory with `cd ..`.
-    ![Figure14](../../assets/images/node/node-14.jpeg)<br/>
+    ![Figure14](./assets/images/node/node-14.jpeg)<br/>
 
     2. Start the node using `./chad`. You should see a message indicating that the "ChaChain server is starting".
     3. Verify the node operation with `./cha-cli getblockchaininfo`.
-    ![Figure15](../../assets/images/node/node-15.jpeg)<br/>
+    ![Figure15](./assets/images/node/node-15.jpeg)<br/>
 
 
 - __Connecting to Peers:__
@@ -96,7 +96,7 @@ Save the file and exit the editor.
     ./cha-cli addnode 146.190.207.106:22833 add
     ./cha-cli addnode 139.59.207.170:22833 add
 ```
-![Figure16](../../assets/images/node/node-16.jpeg)<br/>
+![Figure16](./assets/images/node/node-16.jpeg)<br/>
 
 !!! note
     Nodes are synchronized with the master node after 60 blocks, which is also pertinent for validating stake transactions.
@@ -104,7 +104,7 @@ Save the file and exit the editor.
 - __Receiving an Address:__
     - Once fully synchronized and operational, use `./cha-cli getnewaddress` to generate a new address. You can now send CHA to this address, initiating the verification process and earning rewards for each validated block.
 
-![Figure17](../../assets/images/node/node-17.jpeg)<br/>
+![Figure17](./assets/images/node/node-17.jpeg)<br/>
 
 
 
